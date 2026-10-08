@@ -17,3 +17,6 @@ build
 
 # Fredrin's machine-local tool state — never project content
 .fredrin/
+
+# Vercel CLI project link
+.vercel
