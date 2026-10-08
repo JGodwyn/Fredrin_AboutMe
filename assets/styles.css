@@ -150,3 +150,39 @@ strong { font-weight: 500; color: var(--text-bold); }
   background-repeat: repeat-x;
 }
 .experience .role { display: flex; gap: var(--sp-md); }
+
+/* Section layout from the PortfolioWebsite About page (see template/). Additive:
+   about/ does not use these classes. */
+.page-sections { gap: var(--sp-xl); }
+
+/* Dotted divider between sections: a dot every 4px. */
+.rule {
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background-image: radial-gradient(circle at 0.5px 0.5px, var(--rule) 0.5px, transparent 0.5px);
+  background-size: 4px 1px;
+  background-repeat: repeat-x;
+}
+
+.label { margin: 0; font-size: 14px; line-height: 16px; font-weight: 400; color: var(--text-subtle); }
+
+/* Text links grouped inside one muted pill. */
+.links-pill { background: var(--surface-3); border-radius: var(--rd); padding: 2px 8px; }
+
+/* Experience rows with the period on the left and the role on the right. */
+.timeline { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--sp-md); }
+.timeline li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--sp-md);
+  padding: var(--sp-sm) 0;
+  background-image: radial-gradient(circle at 0.5px 0.5px, var(--border-subtle) 0.5px, transparent 0.5px);
+  background-size: 4px 1px;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+.timeline .role { display: flex; gap: var(--sp-md); }
+.icon { flex-shrink: 0; color: var(--text-subtle); }

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · Godwin John</title>
+  <meta name="description" content="Godwin John, Product Designer and Design Engineer. What I care about, where I have worked, and how to reach me.">
+  <!-- A working copy of about/; remove this line if it becomes a public page. -->
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <!--
+    A copy of the live About page's layout on PortfolioWebsite
+    (src/app/about/page.tsx), with its content copied as is.
+    To start a new page: copy this folder, rename it, and replace the text.
+    Each section stands alone. Add, remove or reorder them, and keep an
+    <hr class="rule"> between neighbouring sections.
+  -->
+  <main class="page page-sections">
+    <a class="pill pill-muted" href="../">&larr; Back</a>
+
+    <!-- Header: photos, heading, intro. Add more <img> tags to grow the photo stack. -->
+    <header class="stack">
+      <div class="photos" aria-label="Photos of Godwin">
+        <img src="../assets/img/shades-home.webp" alt="Godwin in black and white, close to the camera in wide sunglasses" width="72" height="72">
+        <img src="../assets/img/indoors.webp" alt="Godwin indoors in a dark room, looking straight down the lens" width="72" height="72">
+        <img src="../assets/img/white-tee.webp" alt="Godwin outdoors in a white t-shirt, smiling" width="72" height="72">
+        <img src="../assets/img/mirrored-shades.webp" alt="A grainy monochrome shot of Godwin in mirrored sunglasses, chin up" width="72" height="72">
+        <img src="../assets/img/saitama.webp" alt="Saitama from One Punch Man, deadpan in his red suit" width="72" height="72">
+      </div>
+      <h1 class="title">Hi. I am Godwin</h1>
+      <p>
+        I like memes, football, video games, animes, afrobeats, and hip-hop.
+        I’ve been listening to Mac Miller’s Swimming album on repeat for some
+        time now.
+      </p>
+    </header>
+
+    <hr class="rule">
+
+    <!-- Links: text links in one pill, then the contact actions. -->
+    <div class="row">
+      <nav class="links links-pill" aria-label="Elsewhere">
+        <a class="link" href="https://www.linkedin.com/in/gdwn/" target="_blank" rel="me noopener">LinkedIn</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a class="link" href="https://x.com/gdwn__" target="_blank" rel="me noopener">X</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a class="link" href="https://github.com/JGodwyn" target="_blank" rel="me noopener">Github</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a class="link" href="https://dribbble.com/gdwn__" target="_blank" rel="me noopener">Dribbble</a>
+      </nav>
+      <a class="pill pill-solid" href="mailto:gdwn.work@gmail.com">Contact Me</a>
+      <button class="pill pill-muted" type="button" data-copy="gdwn.work@gmail.com">
+        <span data-label>Copy email</span>
+      </button>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Text section: an icon, a paragraph and a list. Add one <li> per point. -->
+    <section class="stack">
+      <svg class="icon" width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M79.93 211.11a96 96 0 1 0-35-35l-11.8 35.31a8 8 0 0 0 10.12 10.12z"/>
+      </svg>
+      <p>
+        I deeply care about building polished products. Three major things
+        that get me going:
+      </p>
+      <ul class="interests">
+        <li>Interactions: How a product behaves when touched. I love designing interaction in SwiftUI, Origami, and After Effects.</li>
+        <li>Systems: Layout, tokens, libraries, design systems. The little things that make a product come alive.</li>
+        <li>Claude &amp; Codex (mostly): Helps me live-test designs, interactions and systems I built.</li>
+      </ul>
+    </section>
+
+    <hr class="rule">
+
+    <!-- Experience: one <li> per role, newest first. -->
+    <section class="stack">
+      <h2 class="label">Experience:</h2>
+      <ul class="timeline">
+        <li><span>2021 - 2026</span><span class="role">Product Designer <span class="subtle">Mactavis</span></span></li>
+        <li><span>Sep ’25 - Jan ’26</span><span class="role">Product Designer <span class="subtle">O Postpartum</span></span></li>
+        <li><span>Jan ’24 - Nov ’25</span><span class="role">Product Designer <span class="subtle">AnyBid</span></span></li>
+        <li><span>Mar - Aug ’24</span><span class="role">Contract Product Designer <span class="subtle">Lucid</span></span></li>
+        <li><span>2021 - 2023</span><span class="role">Founding Product Designer <span class="subtle">5thPro</span></span></li>
+      </ul>
+      <a class="pill pill-muted" href="https://drive.google.com/file/d/11GOuZVzonLh5gfycUYPlL1dTaXPgBipI/view" target="_blank" rel="noopener">See my resume &nearr;</a>
+    </section>
+  </main>
+  <script src="../assets/copy-email.js"></script>
+</body>
+</html>
