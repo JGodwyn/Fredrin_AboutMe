@@ -31,20 +31,7 @@
 
   --font-sans: "Gabarito", ui-sans-serif, system-ui, sans-serif;
 
-  color-scheme: light dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --surface: var(--gray-1000);
-    --surface-3: var(--gray-900);
-    --surface-inverse: var(--gray-0);
-    --text-bold: var(--gray-0);
-    --text-subtle: #999;
-    --text-inverse: var(--gray-1000);
-    --border-subtle: #333;
-    --rule: #4d4d4d;
-  }
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -208,7 +195,7 @@ strong { font-weight: 500; color: var(--text-bold); }
 .work:hover .work-media { translate: 0 -4px; }
 .work-media img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 
-/* Each cover sits on its project's own colour, so these stay fixed in dark mode. */
+/* Each cover sits on its project's own colour. */
 .work-designs { background: #fdfdfd; border: 1px solid var(--border-subtle); }
 .work-meel { background: #fffbdb; }
 .work-presto { background: #ffac99; }

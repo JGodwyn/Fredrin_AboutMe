@@ -22,6 +22,6 @@ the following command and open http://localhost:8000:
 - The site is a single page: the About page lives at the root `index.html`. If a page is ever added, give it
   its own folder with an `index.html` so URLs stay clean, and link to it with a relative path.
 - Shared styles live in `assets/styles.css`. Use its tokens (`--text-subtle`, `--sp-lg`, `--rd`…) and classes
-  (`.page`, `.stack`, `.pill`, `.link`) instead of inline styles. Dark mode comes from swapping tokens, so don't
+  (`.page`, `.stack`, `.pill`, `.link`) instead of inline styles. The site is light-only on a white background, so don't
   hard-code colours.
 - Images go in `assets/img/` as small `.webp` files.
