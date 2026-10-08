@@ -65,7 +65,7 @@ a { color: inherit; }
 p { margin: 0; }
 
 .page {
-  max-width: 440px;
+  max-width: 520px;
   margin: 0 auto;
   padding: 152px var(--gutter);
   display: flex;
