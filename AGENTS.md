@@ -19,8 +19,8 @@ the following command and open http://localhost:8000:
 
 ## Conventions
 
-- Each page is a folder with an `index.html` (for example `about/index.html`) so URLs stay clean (`/about/`).
-  Link to other pages with relative paths.
+- The site is a single page: the About page lives at the root `index.html`. If a page is ever added, give it
+  its own folder with an `index.html` so URLs stay clean, and link to it with a relative path.
 - Shared styles live in `assets/styles.css`. Use its tokens (`--text-subtle`, `--sp-lg`, `--rd`…) and classes
   (`.page`, `.stack`, `.pill`, `.link`) instead of inline styles. Dark mode comes from swapping tokens, so don't
   hard-code colours.

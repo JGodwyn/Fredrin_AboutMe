@@ -151,7 +151,7 @@ strong { font-weight: 500; color: var(--text-bold); }
 }
 .experience .role { display: flex; gap: var(--sp-md); }
 
-/* Section layout from the PortfolioWebsite About page, used by about/ and template/. */
+/* Section layout from the PortfolioWebsite About page, used by index.html and template/. */
 .page-sections { gap: var(--sp-xl); }
 
 /* Dotted divider between sections: a dot every 4px. */
