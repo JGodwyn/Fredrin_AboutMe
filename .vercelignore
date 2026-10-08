@@ -1,0 +1,4 @@
+# Publish only the site itself; everything else stays out of deployments.
+/*
+!/index.html
+!/assets
