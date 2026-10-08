@@ -4,16 +4,24 @@ Conventions for AI coding agents working in **AboutMe**. This file is the
 canonical entry point under the [AGENTS.md](https://agents.md) standard, and it
 is the first thing a Fredrin Worker reads.
 
-It is a stub — the first ticket on the board fills it in.
-
 ## Project
 
-_What is this, in a sentence or two?_
+A small static personal site for Godwin John. Content, tone and look follow
+https://www.godwinjohn.com/: a monochrome palette, the Gabarito typeface, one
+narrow column and pill-shaped controls.
 
 ## Commands
 
-_How do you run it, test it, and build it?_
+There is no build step and there are no dependencies. To preview locally, run
+the following command and open http://localhost:8000:
+
+    python3 -m http.server 8000
 
 ## Conventions
 
-_Anything a new contributor would get wrong on their first try._
+- Each page is a folder with an `index.html` (for example `about/index.html`) so URLs stay clean (`/about/`).
+  Link to other pages with relative paths.
+- Shared styles live in `assets/styles.css`. Use its tokens (`--text-subtle`, `--sp-lg`, `--rd`…) and classes
+  (`.page`, `.stack`, `.pill`, `.link`) instead of inline styles. Dark mode comes from swapping tokens, so don't
+  hard-code colours.
+- Images go in `assets/img/` as small `.webp` files.

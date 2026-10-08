@@ -1,0 +1,152 @@
+/* Tokens follow godwinjohn.com: monochrome, pill radii, 4px spacing scale. */
+:root {
+  --gray-0: #fff;
+  --gray-50: #f2f2f2;
+  --gray-100: #e6e6e6;
+  --gray-200: #ccc;
+  --gray-500: #808080;
+  --gray-900: #191919;
+  --gray-1000: #000;
+
+  --surface: var(--gray-0);
+  --surface-3: var(--gray-50);
+  --surface-inverse: var(--gray-1000);
+  --text-bold: var(--gray-1000);
+  --text-subtle: var(--gray-500);
+  --text-inverse: var(--gray-0);
+  --border-subtle: var(--gray-100);
+  --rule: var(--gray-200);
+
+  --sp-sm: 4px;
+  --sp-md: 8px;
+  --sp-lg: 16px;
+  --sp-xl: 24px;
+  --sp-2xl: 32px;
+  --gutter: 23px;
+  --rd: 9999px;
+
+  --font-sans: "Gabarito", ui-sans-serif, system-ui, sans-serif;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: var(--gray-1000);
+    --surface-3: var(--gray-900);
+    --surface-inverse: var(--gray-0);
+    --text-bold: var(--gray-0);
+    --text-subtle: #999;
+    --text-inverse: var(--gray-1000);
+    --border-subtle: #333;
+    --rule: #4d4d4d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  background: var(--surface);
+  color: var(--text-bold);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+p { margin: 0; }
+
+.page {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 152px var(--gutter);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2xl);
+}
+
+@media (max-width: 600px) {
+  .page { padding-top: 64px; padding-bottom: 64px; }
+}
+
+.stack { display: flex; flex-direction: column; gap: var(--sp-lg); }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-md); }
+
+.lead { font-size: 17px; }
+.subtle { color: var(--text-subtle); }
+.small { font-size: 14px; line-height: 16px; }
+strong { font-weight: 500; color: var(--text-bold); }
+.title { margin: 0; font-size: 17px; font-weight: 500; }
+
+/* Pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  width: fit-content;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: var(--rd);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 150ms, background-color 150ms, scale 150ms;
+}
+.pill:active { scale: 0.97; }
+.pill-muted { background: var(--surface-3); color: var(--text-subtle); }
+.pill-muted:hover { color: var(--text-bold); }
+.pill-solid { background: var(--surface-inverse); color: var(--text-inverse); }
+.pill-solid:hover { opacity: 0.85; }
+:is(.pill, .link):focus-visible { outline: 2px solid var(--text-bold); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pill { transition: none; }
+  .pill:active { scale: 1; }
+}
+
+/* Social links separated by short hairlines */
+.links { display: flex; align-items: center; gap: var(--sp-md); flex-wrap: wrap; }
+.link { color: var(--text-subtle); text-decoration: none; transition: color 150ms; }
+.link:hover { color: var(--text-bold); }
+.sep { width: 1px; height: 8px; background: var(--rule); }
+
+/* Overlapping photo stack */
+.photos { display: flex; }
+.photos img {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--rd);
+  object-fit: cover;
+  background: var(--surface-3);
+  border: 3px solid var(--surface);
+  margin-left: -24px;
+  transition: translate 200ms;
+}
+.photos img:first-child { margin-left: 0; }
+.photos:hover img { translate: 0 -2px; }
+.photos img:hover { translate: 0 -8px; }
+
+.avatar { width: 72px; height: 72px; border-radius: var(--rd); object-fit: cover; }
+
+/* Interests */
+.interests { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--sp-md); }
+
+/* Experience rows with a dotted leader */
+.experience { margin: 0; padding: 0; list-style: none; }
+.experience li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: var(--sp-md);
+  padding: var(--sp-sm) 0;
+  background-image: linear-gradient(to right, var(--rule) 50%, transparent 0);
+  background-size: 4px 1px;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+.experience .role { display: flex; gap: var(--sp-md); }
